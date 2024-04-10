@@ -20,7 +20,7 @@ export function Formulario({ setUser }) {
   }
 
   return (
-    <div className="w-full max-w-xs">
+    <div className="max-h-full w-full max-w-xs">
       <form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={handleSubmit}>
@@ -34,7 +34,7 @@ export function Formulario({ setUser }) {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="email">Correo Electrónico</label>
+            htmlFor="email">Email</label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
@@ -44,7 +44,7 @@ export function Formulario({ setUser }) {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        {error && <p className="text-red-500 mt-2 mb-2 text-center font-bold">Tenés que ingresar tu Email</p>}
+        {error && <p className="text-red-500 mt-2 mb-2 text-center font-bold">Add your Email...</p>}
         <ButtonSubmit />
         <br />
         <ButtonGoogle />

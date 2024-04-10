@@ -8,7 +8,7 @@ function App() {
   const [user, setUser] = useState([])
 
   return (
-    <div className='grid place-content-center h-screen bg-slate-950'>
+    <div className='flex flex-col justify-center items-center bg-slate-950' style={{height:"870px", width:"100%"}}>
       {
         !user.length > 0
           ? <Formulario setUser={setUser} />

@@ -26,53 +26,49 @@ export function TableData({ user, setUser }) {
   }
 
   return (
-    <div className="grid place-content-center max-h-dvh p-8 text-center bg-slate-300 text-black">
-      <div className="">
-        <h1 className="text-xl">
-          ¡Bienvenido!
-        </h1>
-        <p className="text-gray-900 text-lg mb-1 font-medium title-font">
-          {user}
-        </p>
+    <div className="rounded-lg text-center text-white w-11/12 m-auto">
+      <div className="flex flex-wrap flex-row justify-around items-center mb-9 mt-9">
+        <div className="">
+          <h1 className="text-xl">
+            ¡Bienvenido!
+          </h1>
+          <p className="text-white-900 text-lg mb-1 font-medium title-font">
+            {user}
+          </p>
+        </div>
+        <div className="">
+          <button
+            className="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-700 rounded text-lg"
+            onClick={handleLogout}>
+            Log Out
+          </button>
+        </div>
       </div>
 
-      <div className="">
-        <h3 className="text-lg font-semibold mb-2 text-black">Registros</h3>
-        <table>
-          <thead>
+      <div className="overflow-auto rounded-lg shadow bg-neutral-900 p-5 mb-10">
+        <table className="w-full">
+          <thead className="border-b-2 border-l-stone-200">
             <tr>
-              <th className="py-2 px-4 border border-gray-300">Created At</th>
-              <th className="py-2 px-4 border border-gray-300">Name</th>
-              <th className="py-2 px-4 border border-gray-300">Color</th>
-              <th className="py-2 px-4 border border-gray-300">Is Leader</th>
-              <th className="py-2 px-4 border border-gray-300">ID</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Created At</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Name</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Color</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Is Leader</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">ID</th>
             </tr>
           </thead>
           <tbody>
             {userData.map((user) => (
-              <tr key={user.id}>
-                <td className="py-2 px-4 border border-gray-300 text-black">
-                  {user.createdAt}
-                </td>
-                <td className="py-2 px-4 border border-gray-300 text-black">
-                  {user.name}
-                </td>
-                <td className="py-2 px-4 border border-gray-300 text-black">
-                  {user.color}
-                </td>
-                <td className="py-2 px-4 border border-gray-300 text-black">
-                  {user.isLeader}
-                </td>
-                <td className="py-2 px-4 border border-gray-300 text-black">
-                  {user.id}
-                </td>
+              <tr className="whitespace-nowrap" key={user.id}>
+                <td className="p-3 text-left text-lg text-gray-300">{user.createdAt}</td>
+                <td className="p-3 text-left text-lg text-gray-300">{user.name}</td>
+                <td className="p-3 text-left text-lg text-gray-300">{user.color}</td>
+                <td className="p-3 text-left text-lg text-gray-300">{user.isLeader}</td>
+                <td className="p-3 text-left text-lg text-gray-300">{user.id}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
-      <button className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded text-lg" onClick={handleLogout}>Cerrar Sesión</button>
     </div>
   )
 }
