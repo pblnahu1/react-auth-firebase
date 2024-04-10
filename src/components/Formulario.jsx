@@ -27,7 +27,7 @@ export function Formulario({ setUser }) {
         <div>
           <img
             className=""
-            src="src/assets/img/img.png"
+            src="src/assets/img.png"
             alt="Logo Login"
           />
         </div>
