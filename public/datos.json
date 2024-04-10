@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pedro Sanchez",
+    "pais": "Argentina"
+  },
+  {
+    "id": 2,
+    "nombre": "Ana Gomez",
+    "pais": "Argentina"
+  },
+  {
+    "id": 3,
+    "nombre": "Juan Perez",
+    "pais": "Argentina"
+  },
+  {
+    "id": 4,
+    "nombre": "Laura Fernández",
+    "pais": "Argentina"
+  }
+]
