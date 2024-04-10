@@ -45,6 +45,7 @@ export function TableData({ user, setUser }) {
               <th className="py-2 px-4 border border-gray-300">Name</th>
               <th className="py-2 px-4 border border-gray-300">Color</th>
               <th className="py-2 px-4 border border-gray-300">Is Leader</th>
+              <th className="py-2 px-4 border border-gray-300">ID</th>
             </tr>
           </thead>
           <tbody>
