@@ -36,11 +36,12 @@ export function Formulario({setUser}) { // { setUser }
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={handleSubmitAuthenticationFirebase}>
         <div>
-          <img
+          {/* <img
             className=""
-            src="src/assets/img.png"
+            src="../assets/img.png"
             alt="Logo Login"
-          />
+          /> */}
+          <h3>Login with Google</h3>
         </div>
         <div className="mb-4">
           <label
