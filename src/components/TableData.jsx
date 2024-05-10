@@ -13,7 +13,7 @@ export function TableData({ user, setUser }) {
   }, [])
 
   const handleLogout = () => {
-    setUser([])
+    setUser(null)
   }
 
   if (loading) {
