@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Formulario } from './components/Formulario'
 import { TableData } from './components/TableData'
+import { Loader } from './components/Loader'
 // Importando módulos de Firebase
 import appFirebase from './logic/credenciales'
 // eslint-disable-next-line no-unused-vars
@@ -28,7 +29,8 @@ function App() {
   }, [])
 
   if (loading) {
-    return <p>Loading...</p>
+    // return <p>Loading...</p>
+    return <Loader />
   }
 
   // onAuthStateChanged(auth, (userFirebase) => {
